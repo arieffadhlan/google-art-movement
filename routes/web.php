@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LupaPasswordController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('guest')->group(function () {
+    Route::view('/', 'welcome');
+    Route::get('/reset-password', [LupaPasswordController::class, 'index'])->name('resetPassword');
+    Route::put('/reset-password/edit', [LupaPasswordController::class, 'update'])->name('resetPassword.update');
 });
 
 Auth::routes();

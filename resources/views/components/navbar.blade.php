@@ -6,47 +6,45 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-nav ms-auto d-flex justify-content-end align-items-end">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="navbar-nav d-flex justify-content-center align-items-end ms-auto">
+                <ul class="navbar-nav d-flex justify-content-around align-items-end">
                     @guest
                         @if (Route::is('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                            <a class="nav-link fw-bold" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registrasi') }}</a>
                         @endif
                         @if (Route::is('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link fw-bold" href="{{ route('register') }}">{{ __('Registrasi') }}</a>
                         @endif
                     @else
-                        <li class="nav-item me-3">
+                        <li class="nav-item">
                             <a class="nav-link" hrefcolor: #202124;="#"
-                                style="color: #202124; font-size: 14px; font-weight: 500;">
+                                style="color: #202124; font-size: 15px; font-weight: 500;">
                                 Beranda
                             </a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#" style="color: #202124; font-size: 14px; font-weight: 500;">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="#" style="color: #202124; font-size: 15px; font-weight: 500;">
                                 Jelajahi
                             </a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#" style="color: #202124; font-size: 14px; font-weight: 500;">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="#" style="color: #202124; font-size: 15px; font-weight: 500;">
                                 Mainkan
                             </a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#" style="color: #202124; font-size: 14px; font-weight: 500;">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="#" style="color: #202124; font-size: 15px; font-weight: 500;">
                                 Di sekitar
                             </a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#" style="color: #202124; font-size: 14px; font-weight: 500;">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="#" style="color: #202124; font-size: 15px; font-weight: 500;">
                                 Favorit
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ms-3">
                             <div class="btn-group">
                                 <button class="border-0" style="background-color: transparent;"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,25 +52,26 @@
                                         style="width: 32px; height: 32px;">
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li class="dropdown-item">{{ Auth::user()->name }}</li>
+                                    <li class="dropdown-item">{{ Auth::user()->username }}</li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        class="d-none">
-                                        @csrf
-                                    </form>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                    </ul>
-                </div>
-                </li>
-            @endguest
-            </ul>
+                    @endguest
+                </ul>
+            </div>
         </div>
-    </div>
     </div>
 </nav>
