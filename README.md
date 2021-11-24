@@ -5,7 +5,7 @@ Utuk melakukan clone repository ikuti langkah berikut:
 1. Clone repository fhs-management.
 
 ```console
-git clone https://github.com/arieffadhlan/fhs-management.git
+git clone https://github.com/arieffadhlan/google-art-movement.git
 ```
 
 2. Install vendor dengan menggunakan composer (pastikan sudah ada composer di sistem).
