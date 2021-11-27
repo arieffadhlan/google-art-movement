@@ -15,7 +15,6 @@
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,6 +26,13 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/fontawesome/all.min.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    @if (request()->route()->uri == 'home/entity')
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @else
+        <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    @endif
 </head>
 
 <body>
@@ -44,11 +50,48 @@
         @endguest
     </div>
 
-    <script src="{{ asset('vendors/fontawesome/all.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('vendors/fontawesome/all.min.js') }}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         AOS.init();
+
+        let swiperArtikel = new Swiper(".entity-article-contents-swiper", {
+            cssMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperGerakanSeniLainnya = new Swiper(".entity-gerakan-seni-lainnya-contents-swiper", {
+            cssMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperSenimanLainnya = new Swiper(".entity-seniman-lainnya-contents-swiper", {
+            cssMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperMediaLainnya = new Swiper(".entity-media-lainnya-contents-swiper", {
+            cssMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
     </script>
 </body>
 

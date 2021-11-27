@@ -6,9 +6,9 @@
                 <a class="text-decoration-none text-center" style="color: #3c4043; font-weight: 400;">Semua</a>
             </span>
         </section>
-        <section class="entity d-flex flex-wrap justify-content-center mt-2">
+        <section class="entity-section d-flex flex-wrap justify-content-center mt-2">
             @for ($i = 0; $i < 10; $i++)
-                <a href="#" class="position-relative text-decoration-none m-1"
+                <a href="/home/entity" class="position-relative text-decoration-none m-1"
                     style="background-image: url('{{ asset('images/banana.jpg') }}'); background-size: cover; width: 14.75rem; height: 14.75rem;"
                     data-aos="zoom-in" data-aos-once="true">
                     <span class="w-100 position-absolute bottom-0 start-0 text-white" style="padding: 12px;">

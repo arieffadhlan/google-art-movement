@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class GoogleArtLogo extends Component
+class GoogleArtLogoBlack extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class GoogleArtLogo extends Component
      */
     public function render()
     {
-        return view('components.google-art-logo');
+        return view('components.google-art-logo-black');
     }
 }

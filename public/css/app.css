@@ -1,0 +1,175 @@
+/* Navbar */
+.navbar {
+    width: 100%;
+    position: absolute;
+}
+
+.navbar + div {
+    display: flex;
+    justify-content: center;
+}
+
+/* Entity */
+.entity-top-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+.entity-header {
+    padding: 40px 0 28px;
+}
+
+.entity-header-name {
+    margin-bottom: 11px;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: #3c4043;
+}
+
+.entity-header-year {
+    margin-bottom: 47px;
+    padding: 0 24px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.00625em;
+    color: #80868b;
+}
+
+.entity-description {
+    width: calc(100% - 40px * 2);
+    max-width: 700px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Roboto";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0.01428571em;
+    color: #3c4043;
+}
+
+/* Artikel */
+.entity-article,
+.entity-gerakan-seni-lainnya,
+.entity-seniman-lainnya,
+.entity-media-lainnya {
+    width: calc(100% - 40px * 2);
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 0;
+}
+
+.entity-article-header {
+    height: auto;
+    max-width: 1200px;
+    margin: 0 0 24px;
+}
+
+.entity-article-header h3 {
+    padding: 0;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #3c4043;
+}
+
+.entity-article-header a {
+    margin: 8px 24px 12px 24px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.01785714em;
+    color: #1a73e8;
+}
+
+.entity-article-content,
+.entity-gerakan-seni-lainnya-content:not(:last-child),
+.entity-seniman-lainnya-content:not(:last-child),
+.entity-media-lainnya-content:not(:last-child) {
+    margin-right: 16px;
+}
+
+.entity-article-content-image img {
+    width: 222px;
+    height: 222px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.entity-article-content-exhibit span {
+    font-family: "Roboto";
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: 0.07272727em;
+    text-transform: uppercase;
+    color: #1a73e8;
+    margin-bottom: 3px;
+}
+
+.entity-article-content-exhibit h3 {
+    max-width: 222px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.00625em;
+    color: #3c4043;
+    margin: 0 0 4px;
+    margin-bottom: 6px;
+}
+
+.entity-article-content-exhibit h4 {
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.025em;
+    color: #80868b;
+}
+
+/* Gerakan Seni Lainnya, Seniman Lainnya, & Media Lainnya */
+.entity-gerakan-seni-lainnya-header,
+.entity-seniman-lainnya-header,
+.entity-media-lainnya-header {
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.entity-gerakan-seni-lainnya-header h3,
+.entity-seniman-lainnya-header h3,
+.entity-media-lainnya-header h3 {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #3c4043;
+}
+
+.entity-gerakan-seni-lainnya-content a,
+.entity-seniman-lainnya-content a,
+.entity-media-lainnya-content a {
+    border-radius: 8px;
+    overflow: hidden !important;
+}
+
+.entity-gerakan-seni-lainnya-content a img,
+.entity-seniman-lainnya-content a img,
+.entity-media-lainnya-content a img {
+    transition: transform 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.entity-gerakan-seni-lainnya-content:hover a img,
+.entity-seniman-lainnya-content:hover a img,
+.entity-media-lainnya-content:hover a img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.entity-gerakan-seni-lainnya-content a span,
+.entity-seniman-lainnya-content a span,
+.entity-media-lainnya-content a span {
+    padding: 60px 16px 16px;
+}
