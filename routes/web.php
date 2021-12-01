@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EntityController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LupaPasswordController;
@@ -12,9 +13,7 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('home/entity', function () {
-        return view('google-art.entity');
-    });
+    Route::get('/entity/{id}', [EntityController::class, 'index'])->name('entity');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

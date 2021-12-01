@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/fontawesome/all.min.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    @if (request()->route()->uri == 'home/entity')
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    @if (request()->route()->uri == 'entity/{id}')
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
@@ -53,42 +53,52 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('vendors/fontawesome/all.min.js') }}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
     <script>
         AOS.init();
 
         let swiperArtikel = new Swiper(".entity-article-contents-swiper", {
             cssMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-            },
             mousewheel: true,
             keyboard: true,
         });
 
         let swiperGerakanSeniLainnya = new Swiper(".entity-gerakan-seni-lainnya-contents-swiper", {
             cssMode: true,
-            pagination: {
-                el: ".swiper-pagination",
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
+            slidesPerView: "auto",
             mousewheel: true,
             keyboard: true,
         });
 
         let swiperSenimanLainnya = new Swiper(".entity-seniman-lainnya-contents-swiper", {
             cssMode: true,
-            pagination: {
-                el: ".swiper-pagination",
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
+            slidesPerView: "auto",
             mousewheel: true,
             keyboard: true,
         });
 
         let swiperMediaLainnya = new Swiper(".entity-media-lainnya-contents-swiper", {
             cssMode: true,
-            pagination: {
-                el: ".swiper-pagination",
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
+            slidesPerView: "auto",
             mousewheel: true,
             keyboard: true,
         });
