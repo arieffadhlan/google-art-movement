@@ -29,7 +29,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     @if (request()->route()->uri == 'entity/{id}')
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/entity.css') }}">
+    @elseif (request()->route()->uri == 'asset/{id}')
+        <link rel="stylesheet" href="{{ asset('css/asset.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     @endif
@@ -60,6 +62,13 @@
 
         let swiperArtikel = new Swiper(".entity-article-contents-swiper", {
             cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
             mousewheel: true,
             keyboard: true,
         });
@@ -90,7 +99,20 @@
             keyboard: true,
         });
 
-        let swiperMediaLainnya = new Swiper(".entity-media-lainnya-contents-swiper", {
+        let swiperKategoriLainnya = new Swiper(".entity-kategori-lainnya-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperAssetDirekomendasikan = new Swiper(".asset-direkomendasikan-contents-swiper", {
             cssMode: true,
             observer: true,
             observeParents: true,

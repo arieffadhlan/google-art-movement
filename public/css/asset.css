@@ -1,0 +1,137 @@
+/* Swiper */
+.swiper-slide {
+    width: 222px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    padding: 25px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+        0 2px 6px 2px rgb(60 64 67 / 15%);
+    color: black !important;
+}
+
+.swiper-button-next::after {
+    content: "\2192";
+    font-size: 25px;
+}
+
+.swiper-button-prev::after {
+    content: "\2190";
+    font-size: 25px;
+}
+
+/* Asset */
+.asset-top-image img {
+    width: 480px;
+    height: 350px;
+}
+
+.asset-separator {
+    margin-top: 48px;
+    color: #8f8f91;
+}
+
+.asset-header-left-bio {
+    margin-right: 36px;
+}
+
+.asset-header-left-bio h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #3c4043;
+}
+
+.asset-header-left-bio h2,
+.asset-header-left-bio h2 span a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #80868b;
+}
+
+.asset-header-left-bio-artist {
+    margin-right: 10px;
+}
+
+.asset-header-left-bio-year {
+    font-size: 15px;
+}
+
+.asset-detail-title {
+    padding: 24px 0;
+}
+
+.asset-dapatkan-aplikasi {
+    margin-top: 24px;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #1a73e8;
+}
+
+.asset-dapatkan-aplikasi-content header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 2rem;
+    color: #fff;
+}
+
+.asset-dapatkan-aplikasi-content p {
+    margin: 0 40px;
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.01785714em;
+    color: #fff;
+}
+
+/* Asset Direkomendasikan */
+.asset-direkomendasikan {
+    max-width: 1200px;
+    padding: 0;
+}
+
+.asset-direkomendasikan-header {
+    padding-bottom: 12px;
+}
+
+.asset-direkomendasikan-header h3 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+    color: #3c4043;
+}
+
+.asset-direkomendasikan-content:not(:last-child) {
+    margin-right: 16px;
+}
+
+.asset-direkomendasikan-content a {
+    border-radius: 8px;
+    overflow: hidden !important;
+}
+
+.asset-direkomendasikan-content a img {
+    transition: transform 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.asset-direkomendasikan-content:hover a img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.asset-direkomendasikan-content a span {
+    padding: 60px 16px 16px;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}
