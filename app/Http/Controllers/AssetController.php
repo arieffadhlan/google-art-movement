@@ -20,6 +20,7 @@ class AssetController extends Controller
             ->where('assets.id', '=', $assetId)
             ->select(
                 'assets.id as asset_id',
+                'artists.id as artist_id',
                 'artists.name as artist_name',
                 'assets.title as asset_title',
                 'assets.detail as asset_detail',

@@ -10,7 +10,7 @@
                     <h1>{{ $asset['0']->asset_title }}</h1>
                     <h2>
                         <span class="asset-header-left-bio-artist">
-                            <a href="#" class="text-decoration-none">{{ $asset['0']->artist_name }}</a>
+                            <a href="{{ route('artist', $asset['0']->artist_id) }}" class="text-decoration-none">{{ $asset['0']->artist_name }}</a>
                         </span>
                         <span class="asset-header-left-bio-year">2014</span>
                     </h2>
@@ -35,7 +35,7 @@
                         <h2>Dapatkan Aplikasi</h2>
                     </header>
                     <p style="width: 310px">Jelajahi museum dan coba Art Transfer, Pocket Gallery, Art Selfie, serta fitur lainnya</p>
-                    <div class="link-google-and-app-store w-auto d-flex align-items-center">
+                    <div class="link-google-and-app-store w-auto d-flex flex-wrap align-items-center">
                         <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.cultural&amp;referrer=utm_source%3Dstella%26utm_medium%3Dappbadge%26utm_campaign%3Dasset" target="_blank" rel="noopener" role="button" aria-label="Dapatkan aplikasinya di Google Play" data-gacategory="appbadge" data-gaaction="header" data-galabel="android">
                             <img class="TKl5s" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" style="width: 152px; height: 58px">
                         </a>

@@ -1,5 +1,10 @@
 <x-app-layout title="Entity">
     <div class="entity">
+        @php
+            $jumlahStory = count($stories->toArray());
+            $jumlahExhibit = count($exhibits->toArray());
+            $totalArtikel = $jumlahStory + $jumlahExhibit;
+        @endphp
         {{-- Detail --}}
         <img src="{{ $entity['0']->image }}" class="entity-top-image">
         <div class="entity-header d-flex flex-column justify-content-center align-items-center">
@@ -16,7 +21,7 @@
         {{-- Artikel --}}
         <div class="entity-article">
             <div class="entity-article-header d-flex justify-content-between align-items-center">
-                <h3>563 artikel</h3>
+                <h3>{{ $totalArtikel }} artikel</h3>
                 <a href="#" class="text-decoration-none">Lihat Semua</a>
             </div>
             <div class="entity-article-contents d-flex">

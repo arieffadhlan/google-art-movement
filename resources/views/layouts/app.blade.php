@@ -32,6 +32,8 @@
         <link rel="stylesheet" href="{{ asset('css/entity.css') }}">
     @elseif (request()->route()->uri == 'asset/{id}')
         <link rel="stylesheet" href="{{ asset('css/asset.css') }}">
+    @elseif (request()->route()->uri == 'artist/{id}')
+        <link rel="stylesheet" href="{{ asset('css/artist.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     @endif
@@ -59,72 +61,8 @@
 
     <script>
         AOS.init();
-
-        let swiperArtikel = new Swiper(".entity-article-contents-swiper", {
-            cssMode: true,
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            slidesPerView: "auto",
-            mousewheel: true,
-            keyboard: true,
-        });
-
-        let swiperGerakanSeniLainnya = new Swiper(".entity-gerakan-seni-lainnya-contents-swiper", {
-            cssMode: true,
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            slidesPerView: "auto",
-            mousewheel: true,
-            keyboard: true,
-        });
-
-        let swiperSenimanLainnya = new Swiper(".entity-seniman-lainnya-contents-swiper", {
-            cssMode: true,
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            slidesPerView: "auto",
-            mousewheel: true,
-            keyboard: true,
-        });
-
-        let swiperKategoriLainnya = new Swiper(".entity-kategori-lainnya-contents-swiper", {
-            cssMode: true,
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            slidesPerView: "auto",
-            mousewheel: true,
-            keyboard: true,
-        });
-
-        let swiperAssetDirekomendasikan = new Swiper(".asset-direkomendasikan-contents-swiper", {
-            cssMode: true,
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            slidesPerView: "auto",
-            mousewheel: true,
-            keyboard: true,
-        });
     </script>
+    <x-swiper-script></x-swiper-script>
 </body>
 
 </html>
