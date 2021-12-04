@@ -22,12 +22,12 @@ class EntityController extends Controller
 
         $stories = DB::table('entities')
             ->join('stories', 'stories.entites_id', '=', 'entities.id')
-            ->join('partners', 'stories.partner_id', '=', 'partners.id')
+            // ->join('partners', 'stories.partner_id', '=', 'partners.id')
             ->where('entities.id', '=', $entityId)
             ->select(
                 'stories.title as story_title',
                 'stories.image as story_image',
-                'partners.name as partner_name'
+                // 'partners.name as partner_name'
             )
             ->get();
 
@@ -36,6 +36,7 @@ class EntityController extends Controller
             ->join('partners', 'exibits.partner_id', '=', 'partners.id')
             ->where('entities.id', '=', $entityId)
             ->select(
+                'exibits.id as exhibit_id',
                 'exibits.title as exhibit_title',
                 'exibits.image as exhibit_image',
                 'partners.name as partner_name'

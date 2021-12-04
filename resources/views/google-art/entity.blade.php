@@ -1,4 +1,4 @@
-<x-app-layout title="Entity">
+<x-app-layout title="{{ $entity['0']->name }}">
     <div class="entity">
         @php
             $jumlahStory = count($stories->toArray());
@@ -36,14 +36,14 @@
                                     <div class="entity-article-content-exhibit">
                                         <span>Cerita</span>
                                         <h3>{{ Str::limit($story->story_title, 55) }}</h3>
-                                        <h4>{{ $story->partner_name }}</h4>
+                                        {{-- <h4>{{ $story->partner_name }}</h4> --}}
                                     </div>
                                 </a>
                             </div>
                         @endforeach
                         @foreach ($exhibits as $exhibit)
                             <div class="entity-article-content swiper-slide">
-                                <a href="#" class="text-decoration-none">
+                                <a href="{{ route('exhibit', $exhibit->exhibit_id) }}" class="text-decoration-none">
                                     <div class="entity-article-content-image">
                                         <img src="{{ $exhibit->exhibit_image }}">
                                     </div>
@@ -73,7 +73,7 @@
                         @foreach ($assets as $asset)
                             <div class="entity-gerakan-seni-lainnya-content d-flex swiper-slide">
                                 <a href="{{ route('asset', $asset->id) }}" class="position-relative text-decoration-none">
-                                    <img src="{{ asset('images/' . $asset->image) }}"
+                                    <img src="{{ $asset->image }}"
                                         style="background-size: cover; width: 222px; height: 222px;">
                                     <span class="w-100 position-absolute bottom-0 start-0 text-white">
                                         <div style="font-size: 1rem; font-weight: 500; line-height: 1.5rem;">

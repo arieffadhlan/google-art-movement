@@ -1,7 +1,7 @@
-<x-app-layout title="Asset">
+<x-app-layout title="{{ $asset['0']->asset_title }} - {{ $asset['0']->artist_name }}">
     <div class="container asset">
         <div class="asset-top-image d-flex justify-content-center mt-4">
-            <img src="{{ asset('images/' . $asset['0']->asset_image) }}">
+            <img src="{{ $asset['0']->asset_image }}">
         </div>
         <hr class="asset-separator">
         <div class="asset-header d-flex flex-column justify-content-between">
@@ -49,7 +49,7 @@
             {{-- Direkomendasikan --}}
             <div class="asset-direkomendasikan mb-4">
                 <div class="asset-direkomendasikan-header d-flex justify-content-start align-items-start">
-                    <h3>Kategori Lainnya</h3>
+                    <h3>Direkomendasikan</h3>
                 </div>
                 <div class="asset-direkomendasikan-contents d-flex">
                     <div class="swiper asset-direkomendasikan-contents-swiper mx-0">
@@ -57,7 +57,7 @@
                             @foreach ($assets as $asset)
                                 <div class="asset-direkomendasikan-content d-flex swiper-slide">
                                     <a href="{{ route('asset', $asset->asset_id) }}" class="position-relative text-decoration-none">
-                                        <img src="{{ asset('images/' . $asset->asset_image) }}"
+                                        <img src="{{ $asset->asset_image }}"
                                             style="background-size: cover; width: 222px; height: 222px;">
                                         <span class="w-100 position-absolute bottom-0 start-0 text-white">
                                             <div style="font-size: 1rem; font-weight: 500; line-height: 1.5rem;">

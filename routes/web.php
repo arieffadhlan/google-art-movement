@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\AssetController;
 use App\Http\Controllers\EntityController;
+use App\Http\Controllers\ExhibitController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LupaPasswordController;
@@ -17,6 +18,7 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/entity/{id}', [EntityController::class, 'index'])->name('entity');
     Route::get('/asset/{id}', [AssetController::class, 'index'])->name('asset');
+    Route::get('/exhibit/{id}', [ExhibitController::class, 'index'])->name('exhibit');
     Route::get('/artist/{id}', [ArtistController::class, 'index'])->name('artist');
 });
 

@@ -1,8 +1,8 @@
-<x-app-layout title="Artist">
+<x-app-layout title="{{ $artist['0']->name }}">
     <div class="artist">
         {{-- Detail --}}
         <a href="{{ route('asset', $topImage['0']->asset_id) }}">
-            <img src="{{ asset('images/' . $topImage['0']->asset_image) }}" class="artist-top-image">
+            <img src="{{ $topImage['0']->asset_image }}" class="artist-top-image">
         </a>
         <div class="artist-header d-flex flex-column justify-content-center align-items-center">
             <h1 class="artist-header-name">{{ $artist['0']->name }}</h1>
@@ -28,7 +28,7 @@
                     <div class="artist-article-content swiper-slide">
                         <a href="#" class="text-decoration-none">
                             <div class="artist-article-content-image">
-                                <img src="{{ asset('images/ca1.png') }}">
+                                <img src="{{ asset('images/banana.jpg') }}">
                             </div>
                             <div class="artist-article-content-exhibit">
                                 <span>Cerita</span>
@@ -54,7 +54,7 @@
                     @foreach ($assets as $asset)
                         <div class="artist-asset-content d-flex swiper-slide">
                             <a href="{{ route('asset', $asset->asset_id) }}" class="position-relative text-decoration-none">
-                                <img src="{{ asset('images/' . $asset->asset_image) }}"
+                                <img src="{{ $asset->asset_image }}"
                                     style="background-size: cover; width: 222px; height: 222px;">
                                 <span class="w-100 position-absolute bottom-0 start-0 text-white">
                                     <div style="font-size: 1rem; font-weight: 500; line-height: 1.5rem;">

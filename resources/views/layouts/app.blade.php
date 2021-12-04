@@ -32,6 +32,8 @@
         <link rel="stylesheet" href="{{ asset('css/entity.css') }}">
     @elseif (request()->route()->uri == 'asset/{id}')
         <link rel="stylesheet" href="{{ asset('css/asset.css') }}">
+    @elseif (request()->route()->uri == 'exhibit/{id}')
+        <link rel="stylesheet" href="{{ asset('css/exhibit.css') }}">
     @elseif (request()->route()->uri == 'artist/{id}')
         <link rel="stylesheet" href="{{ asset('css/artist.css') }}">
     @else
