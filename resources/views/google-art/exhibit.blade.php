@@ -15,7 +15,7 @@
                 <hr>
             </div>
             <h2 class="exhibit-top-image-content-partner">
-                <a href="#" class="text-decoration-none">
+                <a href="{{ route('partner', $exhibit['0']->partner_id) }}" class="text-decoration-none">
                     {{ $exhibit['0']->partner_name }}
                 </a>
             </h2>
@@ -26,9 +26,11 @@
         <div class="exhibit-detail container col-md-8 d-flex justify-content-center align-items-center">
             <p>{!! $exhibit['0']->exhibit_detail !!}</p> 
         </div>
-        <div class="exhibit-partner-logo d-flex flex-column justify-content-center align-items-center">
-            <img src="{{ $exhibit['0']->partner_logo }}">
-            <h2 class="exhibit-partner-name">{{ $exhibit['0']->partner_name }}</h2>
-        </div>
+        <a href="{{ route('partner', $exhibit['0']->partner_id) }}" class="exhibit-partner text-decoration-none">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="{{ $exhibit['0']->partner_logo }}" class="exhibit-partner-logo">
+                <h2 class="exhibit-partner-name">{{ $exhibit['0']->partner_name }}</h2>
+            </div>
+        </a>
     </div>
 </x-app-layout>

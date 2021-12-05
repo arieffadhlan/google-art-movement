@@ -12,6 +12,7 @@ class AssetController extends Controller
         $assets = DB::table('assets')
             ->join('entities', 'assets.entites_id', '=', 'entities.id')
             ->select('assets.id as asset_id', 'assets.title as asset_title', 'assets.image as asset_image')
+            ->where('assets.id', '!=', $assetId)
             ->limit(7)
             ->get();
 

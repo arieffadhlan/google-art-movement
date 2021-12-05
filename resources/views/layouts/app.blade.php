@@ -32,10 +32,14 @@
         <link rel="stylesheet" href="{{ asset('css/entity.css') }}">
     @elseif (request()->route()->uri == 'asset/{id}')
         <link rel="stylesheet" href="{{ asset('css/asset.css') }}">
+    @elseif (request()->route()->uri == 'story/{id}')
+        <link rel="stylesheet" href="{{ asset('css/story.css') }}">
     @elseif (request()->route()->uri == 'exhibit/{id}')
         <link rel="stylesheet" href="{{ asset('css/exhibit.css') }}">
     @elseif (request()->route()->uri == 'artist/{id}')
         <link rel="stylesheet" href="{{ asset('css/artist.css') }}">
+    @elseif (request()->route()->uri == 'partner/{id}')
+        <link rel="stylesheet" href="{{ asset('css/partner.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     @endif

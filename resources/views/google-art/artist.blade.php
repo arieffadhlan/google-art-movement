@@ -23,7 +23,7 @@
             <a href="#" class="text-decoration-none">Lihat Semua</a>
         </div>
         <div class="artist-article-contents d-flex">
-            <div class="swiper artist-article-contents-swiper">
+            <div class="swiper artist-article-contents-swiper ms-0">
                 <div class="swiper-wrapper d-flex">
                     <div class="artist-article-content swiper-slide">
                         <a href="#" class="text-decoration-none">
@@ -49,7 +49,7 @@
             <h3>Assets</h3>
         </div>
         <div class="artist-asset-contents d-flex">
-            <div class="swiper artist-asset-contents-swiper mx-0">
+            <div class="swiper artist-asset-contents-swiper ms-0">
                 <div class="swiper-wrapper">
                     @foreach ($assets as $asset)
                         <div class="artist-asset-content d-flex swiper-slide">

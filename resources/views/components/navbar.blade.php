@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-transparent">
     <div class="container-fluid">
-        @if (request()->route()->uri == 'entity/{id}' || request()->route()->uri == 'artist/{id}' || request()->route()->uri == 'exhibit/{id}')
+        @if (request()->route()->uri == 'entity/{id}' || request()->route()->uri == 'artist/{id}' || request()->route()->uri == 'story/{id}' || request()->route()->uri == 'exhibit/{id}' || request()->route()->uri == 'partner/{id}')
             <x-google-art-logo-white></x-google-art-logo-white>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

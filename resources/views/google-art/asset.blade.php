@@ -52,7 +52,7 @@
                     <h3>Direkomendasikan</h3>
                 </div>
                 <div class="asset-direkomendasikan-contents d-flex">
-                    <div class="swiper asset-direkomendasikan-contents-swiper mx-0">
+                    <div class="swiper asset-direkomendasikan-contents-swiper ms-0">
                         <div class="swiper-wrapper">
                             @foreach ($assets as $asset)
                                 <div class="asset-direkomendasikan-content d-flex swiper-slide">

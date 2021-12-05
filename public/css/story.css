@@ -14,27 +14,18 @@
     justify-content: center;
 }
 
-/* Exhibit */
-.exhibit-top-image {
+/* story */
+.story-top-image {
     width: 100%;
     height: 500px;
     max-height: 777px;
 }
 
-.exhibit-top-image-content {
+.story-top-image-content {
     margin-top: -300px;
 }
 
-.exhibit-top-image-content-date {
-    margin: 0 0 12px;
-    font-family: "Roboto";
-    font-size: 0.6875rem;
-    font-weight: 500;
-    line-height: 1rem;
-    color: #fff;
-}
-
-.exhibit-top-image-content-title {
+.story-top-image-content-title {
     margin: 0 0 12px;
     font-size: 2rem;
     font-weight: 400;
@@ -43,14 +34,14 @@
     color: #fff;
 }
 
-.exhibit-top-image-separator hr {
+.story-top-image-separator hr {
     width: 30px;
     height: 1px;
     margin: 10px 0 15px;
     border-top: 2px solid #fff;
 }
 
-.exhibit-top-image-content-partner {
+.story-top-image-content-partner {
     margin: 0 0 24px;
     font-family: "Roboto";
     font-size: 1rem;
@@ -59,26 +50,26 @@
     letter-spacing: 0.00625em;
 }
 
-.exhibit-top-image-content-partner a {
+.story-top-image-content-partner a {
     color: #fff;
 }
 
-.exhibit-detail {
+.story-detail {
     margin-top: 160px;
 }
 
-.exhibit-partner {
+.story-partner {
     margin-top: 40px;
 }
 
-.exhibit-partner-logo {
+.story-partner-logo {
     margin-top: 40px;
     margin-bottom: 10px;
     width: 100px;
     height: auto;
 }
 
-.exhibit-partner-name {
+.story-partner-name {
     margin-bottom: 60px;
     font-family: "Roboto";
     font-size: 16px;

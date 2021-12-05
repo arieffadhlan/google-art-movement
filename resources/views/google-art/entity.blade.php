@@ -29,7 +29,7 @@
                     <div class="swiper-wrapper d-flex">
                         @foreach ($stories as $story)
                             <div class="entity-article-content swiper-slide">
-                                <a href="#" class="text-decoration-none">
+                                <a href="{{ route('story', $story->story_id) }}" class="text-decoration-none">
                                     <div class="entity-article-content-image">
                                         <img src="{{ $story->story_image }}">
                                     </div>
@@ -98,23 +98,19 @@
             <div class="entity-seniman-lainnya-contents d-flex">
                 <div class="swiper entity-seniman-lainnya-contents-swiper mx-0">
                     <div class="swiper-wrapper">
-                        @for ($i = 0; $i < 5; $i++)
+                        @foreach ($artists as $artist)
                             <div class="entity-seniman-lainnya-content d-flex swiper-slide">
-                                <a href="/home/entity" class="position-relative text-decoration-none">
-                                    <img src="https://lh4.ggpht.com/Rv0QSZFTet-UhVdAoKnhUrNEM6PPLIakBBiE-AmDPp2jEi5OmedNQRkm0XhY=w336-c-h336-rw-v1"
+                                <a href="{{ route('artist', $artist->id) }}" class="position-relative text-decoration-none">
+                                    <img src="{{ $artist->image }}"
                                         style="background-size: cover; width: 222px; height: 222px;">
                                     <span class="w-100 position-absolute bottom-0 start-0 text-white">
                                         <div style="font-size: 1rem; font-weight: 500; line-height: 1.5rem;">
-                                            Yeondo Jung
-                                        </div>
-                                        <div
-                                            style="font-family: Roboto; font-size: 0.75rem; font-weight: 400; line-height: 1rem;">
-                                            122 item
+                                            {{ $artist->name }}
                                         </div>
                                     </span>
                                 </a>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>

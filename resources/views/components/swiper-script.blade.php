@@ -121,4 +121,32 @@
             keyboard: true,
         });
     </script>
+@elseif (request()->route()->uri == 'partner/{id}')
+    <script>
+        let swiperPartnerArtikel = new Swiper(".partner-article-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperPartnerLainnya = new Swiper(".partner-lainnya-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
 @endif

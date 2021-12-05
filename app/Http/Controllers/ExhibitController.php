@@ -18,6 +18,7 @@ class ExhibitController extends Controller
                 'exibits.detail as exhibit_detail',
                 'exibits.image as exhibit_image',
                 'exibits.date as exhibit_date',
+                'partners.id as partner_id',
                 'partners.name as partner_name',
                 'partners.logo as partner_logo'
             )
