@@ -31,26 +31,17 @@
                                         <td>{!! nl2br(Str::limit($entity->desc, 30)) !!}</td>
                                         <td>{{ $entity->year }}</td>
                                         <td>
-                                            <a class="badge bg-success border-0 text-white fw-normal" style="font-size: 14px;" href="{{ route('entity.edit', $entity->id) }}" role="button">
-                                                Ubah
-                                            </a>
-                                            
-                                            <form action="{{ route('entity.destroy', $entity->id) }}" method="post">
-                                                @csrf
-                                                @method('delete')                                                
-                                                <button type="submit" class="badge bg-danger border-0 text-white fw-normal" style="font-size: 14px;">Hapus</button>
-                                            </form>
-                                            
-                                            <!-- <button type="button" class="badge bg-danger border-0 fw-normal" style="font-size: 14px;" data-bs-toggle="modal"
-                                                data-bs-target="#modalDelete">
-                                                Hapus
-                                            </button> -->
-                                            
-                                            {{-- <x-modal-delete-stock>
-                                                <x-slot name="stock_id">
-                                                    {{ $entity->id }}
-                                                </x-slot>
-                                            </x-modal-delete-stock> --}}
+                                            <div class="d-flex flex-row justify-content-center">
+                                                <a class="badge bg-success border-0 text-white fw-normal me-1" style="font-size: 14px;" href="{{ route('entity.edit', $entity->id) }}" role="button">
+                                                    Ubah
+                                                </a>
+                                                
+                                                <form action="{{ route('entity.destroy', $entity->id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')                                                
+                                                    <button type="submit" class="badge bg-danger border-0 text-white fw-normal" style="font-size: 14px;">Hapus</button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
