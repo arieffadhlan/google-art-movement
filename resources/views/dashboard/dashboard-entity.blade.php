@@ -7,7 +7,7 @@
             <div class="card-header fs-5 fw-bold text-primary">
                 <div class="d-flex justify-content-between align-items-center">
                     Data Entity
-                    <a class="btn btn-primary" href="#" role="button">
+                    <a class="btn btn-primary" href="{{ route('entity.create') }}" role="button">
                         Tambah Data
                     </a>
                 </div>
@@ -31,13 +31,21 @@
                                         <td>{!! nl2br(Str::limit($entity->desc, 50)) !!}</td>
                                         <td>{{ $entity->year }}</td>
                                         <td>
-                                            <a class="badge bg-success border-0 text-white fw-normal" style="font-size: 14px;" href="#" role="button">
+                                            <a class="badge bg-success border-0 text-white fw-normal" style="font-size: 14px;" href="{{ route('entity.edit', $entity->id) }}" role="button">
                                                 Ubah
                                             </a>
-                                            <button type="button" class="badge bg-danger border-0 fw-normal" style="font-size: 14px;" data-bs-toggle="modal"
+                                            
+                                            <form action="{{ route('entity.destroy', $entity->id) }}" method="post">
+                                                @csrf
+                                                @method('delete')                                                
+                                                <button type="submit" class="badge bg-danger border-0 text-white fw-normal" style="font-size: 14px;">Hapus</button>
+                                            </form>
+                                            
+                                            <!-- <button type="button" class="badge bg-danger border-0 fw-normal" style="font-size: 14px;" data-bs-toggle="modal"
                                                 data-bs-target="#modalDelete">
                                                 Hapus
-                                            </button>
+                                            </button> -->
+                                            
                                             {{-- <x-modal-delete-stock>
                                                 <x-slot name="stock_id">
                                                     {{ $entity->id }}

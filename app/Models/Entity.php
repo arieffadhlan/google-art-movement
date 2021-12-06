@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Entity extends Model
 {
+    protected $fillable = [
+        'name',
+        'year',
+        'desc',
+        'image',
+    ];
+
     use HasFactory;
 }

@@ -28,6 +28,11 @@ Route::middleware('auth')->group(function () {
 
     // Dashboard
     Route::get('/dashboard/entity', [DashboardEntity::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/entity/create', [DashboardEntity::class, 'create'])->name('entity.create');
+    Route::post('/dashboard/entity/store', [DashboardEntity::class, 'store'])->name('entity.store');
+    Route::get('/dashboard/entity/edit/{id}', [DashboardEntity::class, 'edit'])->name('entity.edit');
+    Route::put('/dashboard/entity/edit/{id}', [DashboardEntity::class, 'update'])->name('entity.update');
+    Route::delete('/dashboard/entity/delete/{id}', [DashboardEntity::class, 'destroy'])->name('entity.destroy');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

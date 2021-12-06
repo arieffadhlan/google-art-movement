@@ -26,7 +26,7 @@ class DashboardEntity extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.entity.create');
     }
 
     /**
@@ -37,7 +37,25 @@ class DashboardEntity extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'name' => 'required',
+            'year'  => 'required',
+            'desc' => 'required',
+            'image' => 'required',
+        ], $messages);
+
+        Entity::create([
+            'name' => $request->name,
+            'year'  => $request->year,
+            'desc' => $request->desc,
+            'image' => $request->image,
+        ]);
+
+        return redirect('/dashboard/entity');
     }
 
     /**
@@ -59,7 +77,8 @@ class DashboardEntity extends Controller
      */
     public function edit($id)
     {
-        //
+        $entities = Entity::find($id);
+        return view('dashboard.entity.edit', compact('entities'));
     }
 
     /**
@@ -71,7 +90,27 @@ class DashboardEntity extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $entities = Entity::whereId($id)->first();
+        
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'name' => 'required',
+            'year'  => 'required',
+            'desc' => 'required',
+            'image' => 'required',
+        ], $messages);
+
+        $entities->update([
+            'name' => $request->name,
+            'year'  => $request->year,
+            'desc' => $request->desc,
+            'image' => $request->image,
+        ]);
+
+        return redirect('/dashboard/entity');
     }
 
     /**
@@ -82,6 +121,9 @@ class DashboardEntity extends Controller
      */
     public function destroy($id)
     {
-        //
+        $entities = Entity::find($id);
+        $entities->delete();
+
+        return redirect('/dashboard/entity');
     }
 }
