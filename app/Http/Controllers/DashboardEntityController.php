@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Entity;
 use Illuminate\Http\Request;
 
-class DashboardEntity extends Controller
+class DashboardEntityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class DashboardEntity extends Controller
     {
         $entities = Entity::get();
         
-        return view('dashboard.dashboard-entity', compact('entities'));
+        return view('dashboard.entity.index', compact('entities'));
     }
 
     /**

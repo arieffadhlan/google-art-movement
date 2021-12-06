@@ -50,6 +50,31 @@
             let tableEntity = document.querySelector('#tableEntity');
             let dataTableEntity = new simpleDatatables.DataTable(tableEntity);
         </script>
+    @elseif (request()->route()->uri == 'dashboard/asset')
+        <script>
+            let tableAsset = document.querySelector('#tableAsset');
+            let dataTableAsset = new simpleDatatables.DataTable(tableAsset);
+        </script>
+    @elseif (request()->route()->uri == 'dashboard/story')
+        <script>
+            let tableStory = document.querySelector('#tableStory');
+            let dataTableStory = new simpleDatatables.DataTable(tableStory);
+        </script>
+    @elseif (request()->route()->uri == 'dashboard/exhibit')
+        <script>
+            let tableExhibit = document.querySelector('#tableExhibit');
+            let dataTableExhibit = new simpleDatatables.DataTable(tableExhibit);
+        </script>
+    @elseif (request()->route()->uri == 'dashboard/artist')
+        <script>
+            let tableArtist = document.querySelector('#tableArtist');
+            let dataTableArtist = new simpleDatatables.DataTable(tableArtist);
+        </script>
+    @elseif (request()->route()->uri == 'dashboard/partner')
+        <script>
+            let tablePartner = document.querySelector('#tablePartner');
+            let dataTablePartner = new simpleDatatables.DataTable(tablePartner);
+        </script>
     @endif
 	<script src="{{ asset('js/volt.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>

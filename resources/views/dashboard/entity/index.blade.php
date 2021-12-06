@@ -1,4 +1,4 @@
-<x-dashboard-layout title="Gerakan Seni">
+<x-dashboard-layout title="Entity">
     <div class="d-flex justify-content-between align-items-center">
         <h2>Entity</h2>
     </div>
@@ -17,7 +17,7 @@
                     <div class="entitySection">
                         <table class="table table-hover table-striped table-bordered" id="tableEntity">
                             <thead class="text-center">
-                                <tr class="table-secondary">
+                                <tr class="table-primary">
                                     <th>Name</th>
                                     <th>Description</th>
                                     <th>Year</th>
@@ -28,7 +28,7 @@
                                 @foreach ($entities as $entity)
                                     <tr class="text-center">
                                         <td>{{ $entity->name }}</td>
-                                        <td>{!! nl2br(Str::limit($entity->desc, 50)) !!}</td>
+                                        <td>{!! nl2br(Str::limit($entity->desc, 30)) !!}</td>
                                         <td>{{ $entity->year }}</td>
                                         <td>
                                             <a class="badge bg-success border-0 text-white fw-normal" style="font-size: 14px;" href="{{ route('entity.edit', $entity->id) }}" role="button">
@@ -60,7 +60,7 @@
                 @else
                     <div class="col-12">
                         <div class="alert alert-primary">
-                            Data stok kosong.
+                            Data entity kosong.
                         </div>
                     </div>
                 @endif

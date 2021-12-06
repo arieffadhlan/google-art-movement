@@ -44,8 +44,8 @@
             </div>
         </div>
         <ul class="nav flex-column pt-3 pt-md-0">
-            <li class="nav-item active">
-                <a href="../../pages/transactions.html" class="nav-link">
+            <li class="nav-item @if (request()->route()->uri == 'dashboard/entity') active @endif">
+                <a href="{{ route('dashboard-entity') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -59,8 +59,8 @@
                     <span class="sidebar-text">Entity</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="../../pages/transactions.html" class="nav-link">
+            <li class="nav-item @if (request()->route()->uri == 'dashboard/asset') active @endif">
+                <a href="{{ route('dashboard-asset') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -74,8 +74,8 @@
                     <span class="sidebar-text">Asset</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="../../pages/transactions.html" class="nav-link">
+            <li class="nav-item @if (request()->route()->uri == 'dashboard/story') active @endif">
+                <a href="{{ route('dashboard-story') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -89,8 +89,8 @@
                     <span class="sidebar-text">Story</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="../../pages/transactions.html" class="nav-link">
+            <li class="nav-item @if (request()->route()->uri == 'dashboard/exhibit') active @endif">
+                <a href="{{ route('dashboard-exhibit') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -104,8 +104,8 @@
                     <span class="sidebar-text">Exhibit</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="../../pages/transactions.html" class="nav-link">
+            <li class="nav-item @if (request()->route()->uri == 'dashboard/artist') active @endif">
+                <a href="{{ route('dashboard-artist') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -119,8 +119,8 @@
                     <span class="sidebar-text">Artist</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a href="../../pages/transactions.html" class="nav-link">
+            <li class="nav-item @if (request()->route()->uri == 'dashboard/partner') active @endif">
+                <a href="{{ route('dashboard-partner') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
