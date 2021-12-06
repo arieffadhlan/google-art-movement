@@ -18,14 +18,20 @@ class AssetController extends Controller
 
         $asset = DB::table('assets')
             ->join('artists', 'artists.id', '=', 'assets.artist_id')
+            ->join('partners', 'partners.id', '=', 'assets.partner_id')
             ->where('assets.id', '=', $assetId)
             ->select(
                 'assets.id as asset_id',
+                'assets.title as asset_title',
+                'assets.desc as asset_desc',
+                'assets.detail as asset_detail',
+                'assets.image as asset_image',
                 'artists.id as artist_id',
                 'artists.name as artist_name',
-                'assets.title as asset_title',
-                'assets.detail as asset_detail',
-                'assets.image as asset_image'
+                'partners.id as partner_id',
+                'partners.name as partner_name',
+                'partners.logo as partner_logo',
+                'partners.location as partner_location',
             )
             ->get();
 

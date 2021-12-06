@@ -1,8 +1,5 @@
 <x-app-layout title="{{ $partner['0']->name }}">
     <div class="partner">
-        @php
-            $jumlahExhibit = count($exhibits->toArray());
-        @endphp
         {{-- Detail --}}
         <img src="{{ $partner['0']->image }}" class="partner-top-image">
         <div class="partner-header d-flex flex-column justify-content-center align-items-center">
@@ -17,35 +14,6 @@
         </div>
         <div class="partner-detail d-flex flex-column justify-content-center align-items-center">
             {!! $partner['0']->detail !!}
-        </div>
-    </div>
-
-    {{-- Artikel --}}
-    <div class="partner-article">
-        <div class="partner-article-header d-flex justify-content-between align-items-center">
-            <h3>{{ $jumlahExhibit }} artikel</h3>
-        </div>
-        <div class="partner-article-contents d-flex">
-            <div class="swiper partner-article-contents-swiper ms-0">
-                <div class="swiper-wrapper d-flex">
-                    @foreach ($exhibits as $exhibit)
-                        <div class="partner-article-content swiper-slide">
-                            <a href="{{ route('exhibit', $exhibit->exhibit_id) }}" class="text-decoration-none">
-                                <div class="partner-article-content-image">
-                                    <img src="{{ $exhibit->exhibit_image }}">
-                                </div>
-                                <div class="partner-article-content-exhibit">
-                                    <span>Cerita</span>
-                                    <h3>{{ Str::limit($exhibit->exhibit_title, 55) }}</h3>
-                                    <h4>{{ $exhibit->partner_name }}</h4>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
         </div>
     </div>
 

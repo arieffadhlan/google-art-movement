@@ -61,8 +61,47 @@
     font-size: 15px;
 }
 
+.asset-header-right-image {
+    max-height: 50px;
+    max-width: 65px;
+    margin-bottom: 16px;
+}
+
+.asset-header-right-text-content {
+    font-family: "Roboto";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.025em;
+    color: #202124;
+}
+
+.asset-header-right-text-content span {
+    color: #80868b;
+}
+
 .asset-detail-title {
     padding: 24px 0;
+}
+
+.asset-description {
+    margin: 24px 0;
+}
+
+.asset-description-content {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7em;
+    color: #202124;
+}
+
+.asset-detail-content {
+    font-family: "Roboto";
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: #3c4043;
 }
 
 .asset-dapatkan-aplikasi {

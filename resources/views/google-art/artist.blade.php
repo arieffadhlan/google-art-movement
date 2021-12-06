@@ -16,33 +16,6 @@
         </div>
     </div>
 
-    {{-- Artikel --}}
-    <div class="artist-article">
-        <div class="artist-article-header d-flex justify-content-between align-items-center">
-            <h3>563 artikel</h3>
-            <a href="#" class="text-decoration-none">Lihat Semua</a>
-        </div>
-        <div class="artist-article-contents d-flex">
-            <div class="swiper artist-article-contents-swiper ms-0">
-                <div class="swiper-wrapper d-flex">
-                    <div class="artist-article-content swiper-slide">
-                        <a href="#" class="text-decoration-none">
-                            <div class="artist-article-content-image">
-                                <img src="{{ asset('images/banana.jpg') }}">
-                            </div>
-                            <div class="artist-article-content-exhibit">
-                                <span>Cerita</span>
-                                <h3>8 Facts About Kara Walker</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-    </div>
-
     {{-- Asset --}}
     <div class="artist-asset">
         <div class="artist-asset-header d-flex justify-content-start align-items-start">

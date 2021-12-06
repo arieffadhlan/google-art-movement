@@ -56,6 +56,9 @@
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li class="dropdown-item">{{ Auth::user()->username }}</li>
                                         <li>
+                                            <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                        </li>
+                                        <li>
                                             <hr class="dropdown-divider">
                                         </li>
                                         <li>
@@ -134,6 +137,9 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li class="dropdown-item">{{ Auth::user()->username }}</li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                        </li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>

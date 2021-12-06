@@ -1,0 +1,8 @@
+.dataTable-top,
+.dataTable-bottom {
+    display: block;
+}
+
+.dataTable-dropdown label {
+    margin-bottom: 0;
+}

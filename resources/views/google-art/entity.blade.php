@@ -68,7 +68,7 @@
                 <h3>Assets</h3>
             </div>
             <div class="entity-gerakan-seni-lainnya-contents d-flex">
-                <div class="swiper entity-gerakan-seni-lainnya-contents-swiper mx-0">
+                <div class="swiper entity-gerakan-seni-lainnya-contents-swiper ms-0">
                     <div class="swiper-wrapper">
                         @foreach ($assets as $asset)
                             <div class="entity-gerakan-seni-lainnya-content d-flex swiper-slide">
@@ -96,7 +96,7 @@
                 <h3>Seniman Lainnya</h3>
             </div>
             <div class="entity-seniman-lainnya-contents d-flex">
-                <div class="swiper entity-seniman-lainnya-contents-swiper mx-0">
+                <div class="swiper entity-seniman-lainnya-contents-swiper ms-0">
                     <div class="swiper-wrapper">
                         @foreach ($artists as $artist)
                             <div class="entity-seniman-lainnya-content d-flex swiper-slide">
@@ -124,7 +124,7 @@
                 <h3>Kategori Lainnya</h3>
             </div>
             <div class="entity-kategori-lainnya-contents d-flex">
-                <div class="swiper entity-kategori-lainnya-contents-swiper mx-0">
+                <div class="swiper entity-kategori-lainnya-contents-swiper ms-0">
                     <div class="swiper-wrapper">
                         @foreach ($entities as $entity)
                             <div class="entity-kategori-lainnya-content d-flex swiper-slide">

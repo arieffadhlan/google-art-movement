@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\AssetController;
+use App\Http\Controllers\DashboardEntity;
 use App\Http\Controllers\EntityController;
 use App\Http\Controllers\ExhibitController;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +25,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/exhibit/{id}', [ExhibitController::class, 'index'])->name('exhibit');
     Route::get('/artist/{id}', [ArtistController::class, 'index'])->name('artist');
     Route::get('/partner/{id}', [PartnerController::class, 'index'])->name('partner');
+
+    // Dashboard
+    Route::get('/dashboard/entity', [DashboardEntity::class, 'index'])->name('dashboard');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
