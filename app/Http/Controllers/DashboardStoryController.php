@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Entity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class DashboardEntity extends Controller
+class DashboardStoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,19 @@ class DashboardEntity extends Controller
      */
     public function index()
     {
-        $entities = Entity::get();
-        
-        return view('dashboard.dashboard-entity', compact('entities'));
+        $stories = DB::table('stories')
+        ->join('entities', 'entities.id', '=', 'stories.entites_id')
+        ->join('partners', 'partners.id', '=', 'stories.partner_id')
+        ->select(
+            'stories.id as story_id',
+            'stories.title as story_title',
+            'stories.detail as story_detail',
+            'entities.name as kategori',
+            'partners.name as partner',
+        )
+        ->get();
+
+        return view('dashboard.story.index', compact('stories'));
     }
 
     /**

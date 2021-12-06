@@ -2,7 +2,12 @@
 
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\AssetController;
-use App\Http\Controllers\DashboardEntity;
+use App\Http\Controllers\DashboardArtistController;
+use App\Http\Controllers\DashboardAssetController;
+use App\Http\Controllers\DashboardEntityController;
+use App\Http\Controllers\DashboardExhibitController;
+use App\Http\Controllers\DashboardPartnerController;
+use App\Http\Controllers\DashboardStoryController;
 use App\Http\Controllers\EntityController;
 use App\Http\Controllers\ExhibitController;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +32,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/partner/{id}', [PartnerController::class, 'index'])->name('partner');
 
     // Dashboard
-    Route::get('/dashboard/entity', [DashboardEntity::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/entity', [DashboardEntityController::class, 'index'])->name('dashboard-entity');
+    Route::get('/dashboard/asset', [DashboardAssetController::class, 'index'])->name('dashboard-asset');
+    Route::get('/dashboard/story', [DashboardStoryController::class, 'index'])->name('dashboard-story');
+    Route::get('/dashboard/exhibit', [DashboardExhibitController::class, 'index'])->name('dashboard-exhibit');
+    Route::get('/dashboard/artist', [DashboardArtistController::class, 'index'])->name('dashboard-artist');
+    Route::get('/dashboard/partner', [DashboardPartnerController::class, 'index'])->name('dashboard-partner');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -56,7 +56,7 @@
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li class="dropdown-item">{{ Auth::user()->username }}</li>
                                         <li>
-                                            <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                            <a class="dropdown-item" href="{{ route('dashboard-entity') }}">Dashboard</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">
@@ -138,7 +138,7 @@
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li class="dropdown-item">{{ Auth::user()->username }}</li>
                                         <li>
-                                            <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                            <a class="dropdown-item" href="{{ route('dashboard-entity') }}">Dashboard</a>
                                         </li>
                                         <li>
                                             <hr class="dropdown-divider">
