@@ -18,9 +18,9 @@ class CreateStoriesTable extends Migration
             $table->string('title');
             $table->text('detail');
             $table->string('image');
-            $table->string('entites_id');
-            $table->string('artist_id')->nullable();
-            $table->string('partner_id')->nullable();
+            $table->bigInteger('entites_id');
+            $table->bigInteger('artist_id')->nullable();
+            $table->bigInteger('partner_id')->nullable();
             $table->timestamps();
         });
     }

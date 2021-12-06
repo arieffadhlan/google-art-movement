@@ -18,7 +18,7 @@ class CreateEntitiesTable extends Migration
             $table->string('name');
             $table->text('desc');
             $table->string('image');
-            $table->YEAR('year');
+            $table->string('year');
             $table->timestamps();
         });
     }

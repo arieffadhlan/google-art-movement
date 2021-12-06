@@ -17,10 +17,9 @@ class CreatePartnersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->string('country');
+            $table->string('logo');
+            $table->string('location');
             $table->string('detail');
-            $table->string('story_id')->nullable();
-            $table->string('exibit_id')->nullable();
             $table->timestamps();
         });
     }

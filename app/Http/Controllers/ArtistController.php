@@ -35,7 +35,7 @@ class ArtistController extends Controller
             ->get();
 
         $artist = DB::table('artists')
-            ->select('artists.name', 'artists.detail', 'artists.image', 'artists.riwayat')
+            ->select('artists.name', 'artists.detail', 'artists.riwayat')
             ->where('artists.id', '=', $artistId)
             ->get();
 
