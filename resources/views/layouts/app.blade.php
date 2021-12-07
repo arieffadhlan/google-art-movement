@@ -25,7 +25,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendors/fontawesome/all.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('vendors/fontawesome/all.min.css') }}"> --}}
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     @if (request()->route()->uri == 'entity/{id}')
@@ -40,6 +40,8 @@
         <link rel="stylesheet" href="{{ asset('css/artist.css') }}">
     @elseif (request()->route()->uri == 'partner/{id}')
         <link rel="stylesheet" href="{{ asset('css/partner.css') }}">
+    @elseif (request()->route()->uri == 'penelusuran')
+        <link rel="stylesheet" href="{{ asset('css/search.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     @endif
@@ -61,7 +63,7 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('vendors/fontawesome/all.min.js') }}"></script>
+    {{-- <script src="{{ asset('vendors/fontawesome/all.min.js') }}"></script> --}}
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 

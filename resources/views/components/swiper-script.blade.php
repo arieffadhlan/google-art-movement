@@ -149,4 +149,71 @@
             keyboard: true,
         });
     </script>
+@elseif (request()->route()->uri == 'penelusuran')
+    <script>
+        let swiperEntityTerkait = new Swiper(".entity-terkait-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperArtikelTerkait = new Swiper(".entity-article-terkait-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperAssetTerkait = new Swiper(".entity-asset-terkait-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperArtistTerkait = new Swiper(".entity-artist-terkait-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        let swiperPartnerTerkait = new Swiper(".entity-partner-terkait-contents-swiper", {
+            cssMode: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            slidesPerView: "auto",
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
 @endif
