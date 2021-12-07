@@ -14,7 +14,7 @@
             </div>
             <div class="card-body">
                 @if ($partners->isNotEmpty())
-                    <div class="entitySection">
+                    <div class="entitySection table-responsive">
                         <table class="table table-hover table-striped table-bordered" id="tablePartner">
                             <thead class="text-center">
                                 <tr class="table-primary">

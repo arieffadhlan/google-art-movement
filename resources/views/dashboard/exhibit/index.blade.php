@@ -14,7 +14,7 @@
             </div>
             <div class="card-body">
                 @if ($exhibits->isNotEmpty())
-                    <div class="entitySection">
+                    <div class="entitySection table-responsive">
                         <table class="table table-hover table-striped table-bordered" id="tableExhibit">
                             <thead class="text-center">
                                 <tr class="table-primary">
