@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Story;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -36,7 +37,28 @@ class DashboardStoryController extends Controller
      */
     public function create()
     {
-        //
+        $entities = DB::table('entities')
+            ->select(
+                'entities.id as id',
+                'entities.name as name',
+            )
+            ->get();
+        
+        $partners = DB::table('partners')
+            ->select(
+                'partners.id as id',
+                'partners.name as name',
+            )
+            ->get();
+
+        $artists = DB::table('artists')
+            ->select(
+                'artists.id as id',
+                'artists.name as name',
+            )
+            ->get();
+
+        return view('dashboard.story.create', compact('partners', 'entities', 'artists'));
     }
 
     /**
@@ -47,7 +69,27 @@ class DashboardStoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'title' => 'required',
+            'detail' => 'required',
+            'image' => 'required',
+            'entites_id' => 'required',
+            'partner_id' => 'required',
+        ], $messages);
+
+        Story::create([
+            'title' => $request->title,
+            'detail' => $request->detail,
+            'image' => $request->image,
+            'entites_id' => $request->entites_id,
+            'partner_id' => $request->partner_id,
+        ]);
+
+        return redirect('/dashboard/story');
     }
 
     /**
@@ -69,7 +111,30 @@ class DashboardStoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $stories = Story::find($id);
+
+        $entities = DB::table('entities')
+            ->select(
+                'entities.id as id',
+                'entities.name as name',
+            )
+            ->get();
+        
+        $partners = DB::table('partners')
+            ->select(
+                'partners.id as id',
+                'partners.name as name',
+            )
+            ->get();
+
+        $artists = DB::table('artists')
+            ->select(
+                'artists.id as id',
+                'artists.name as name',
+            )
+            ->get();
+
+        return view('dashboard.story.edit', compact('stories','partners', 'entities', 'artists'));
     }
 
     /**
@@ -81,7 +146,29 @@ class DashboardStoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $stories = Story::whereId($id)->first();
+
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'title' => 'required',
+            'detail' => 'required',
+            'image' => 'required',
+            'entites_id' => 'required',
+            'partner_id' => 'required',
+        ], $messages);
+
+        $stories->update([
+            'title' => $request->title,
+            'detail' => $request->detail,
+            'image' => $request->image,
+            'entites_id' => $request->entites_id,
+            'partner_id' => $request->partner_id,
+        ]);
+
+        return redirect('/dashboard/story');
     }
 
     /**
@@ -92,6 +179,9 @@ class DashboardStoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $story = Story::find($id);
+        $story->delete();
+
+        return redirect('/dashboard/asset');
     }
 }

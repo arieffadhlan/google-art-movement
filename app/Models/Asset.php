@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Asset extends Model
 {
+    protected $fillable = [
+        'title',
+        'detail',
+        'desc',
+        'image',
+        'year',
+        'entites_id',
+        'partner_id',
+        'artist_id',
+    ];
     use HasFactory;
 }

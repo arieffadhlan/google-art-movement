@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Artist;
 
 class DashboardArtistController extends Controller
 {
@@ -15,7 +16,7 @@ class DashboardArtistController extends Controller
     public function index()
     {
         $artists = DB::table('artists')
-            ->select('artists.name', 'artists.detail', 'artists.riwayat')
+            ->select('artists.id', 'artists.name', 'artists.detail', 'artists.riwayat')
             ->get();
 
         return view('dashboard.artist.index', compact('artists'));
@@ -28,7 +29,7 @@ class DashboardArtistController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.artist.create');
     }
 
     /**
@@ -39,7 +40,23 @@ class DashboardArtistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'name' => 'required',
+            'detail'  => 'required',
+            'riwayat' => 'required',
+        ], $messages);
+
+        Artist::create([
+            'name' => $request->name,
+            'detail'  => $request->detail,
+            'riwayat' => $request->riwayat,
+        ]);
+
+        return redirect('/dashboard/artist');
     }
 
     /**
@@ -61,7 +78,8 @@ class DashboardArtistController extends Controller
      */
     public function edit($id)
     {
-        //
+        $artists = Artist::find($id);
+        return view('dashboard.artist.edit', compact('artists'));
     }
 
     /**
@@ -73,7 +91,24 @@ class DashboardArtistController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $artists = Artist::whereId($id)->first();
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'name' => 'required',
+            'detail'  => 'required',
+            'riwayat' => 'required',
+        ], $messages);
+
+        $artists->update([
+            'name' => $request->name,
+            'detail'  => $request->detail,
+            'riwayat' => $request->riwayat,
+        ]);
+
+        return redirect('/dashboard/artist');
     }
 
     /**
@@ -84,6 +119,9 @@ class DashboardArtistController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $artist = Artist::find($id);
+        $artist->delete();
+
+        return redirect('/dashboard/artist');
     }
 }

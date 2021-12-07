@@ -56,6 +56,25 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/exhibit/edit/{id}', [DashboardExhibitController::class, 'edit'])->name('exhibit.edit');
     Route::put('/dashboard/exhibit/edit/{id}', [DashboardExhibitController::class, 'update'])->name('exhibit.update');
     Route::delete('/dashboard/exhibit/delete/{id}', [DashboardExhibitController::class, 'destroy'])->name('exhibit.destroy');
+
+    Route::get('/dashboard/artist/create', [DashboardArtistController::class, 'create'])->name('artist.create');
+    Route::post('/dashboard/artist/store', [DashboardArtistController::class, 'store'])->name('artist.store');
+    Route::get('/dashboard/artist/edit/{id}', [DashboardArtistController::class, 'edit'])->name('artist.edit');
+    Route::put('/dashboard/artist/edit/{id}', [DashboardArtistController::class, 'update'])->name('artist.update');
+    Route::delete('/dashboard/artist/delete/{id}', [DashboardArtistController::class, 'destroy'])->name('artist.destroy');
+
+    Route::get('/dashboard/asset/create', [DashboardAssetController::class, 'create'])->name('asset.create');
+    Route::post('/dashboard/asset/store', [DashboardAssetController::class, 'store'])->name('asset.store');
+    Route::get('/dashboard/asset/edit/{id}', [DashboardAssetController::class, 'edit'])->name('asset.edit');
+    Route::put('/dashboard/asset/edit/{id}', [DashboardAssetController::class, 'update'])->name('asset.update');
+    Route::delete('/dashboard/asset/delete/{id}', [DashboardAssetController::class, 'destroy'])->name('asset.destroy');
+
+    Route::get('/dashboard/story/create', [DashboardStoryController::class, 'create'])->name('story.create');
+    Route::post('/dashboard/story/store', [DashboardStoryController::class, 'store'])->name('story.store');
+    Route::get('/dashboard/story/edit/{id}', [DashboardStoryController::class, 'edit'])->name('story.edit');
+    Route::put('/dashboard/story/edit/{id}', [DashboardStoryController::class, 'update'])->name('story.update');
+    Route::delete('/dashboard/story/delete/{id}', [DashboardStoryController::class, 'destroy'])->name('story.destroy');
+
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
