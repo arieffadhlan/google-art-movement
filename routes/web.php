@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LupaPasswordController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\StoryController;
 
 Auth::routes();
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/exhibit/{id}', [ExhibitController::class, 'index'])->name('exhibit');
     Route::get('/artist/{id}', [ArtistController::class, 'index'])->name('artist');
     Route::get('/partner/{id}', [PartnerController::class, 'index'])->name('partner');
+    Route::get('/penelusuran', [SearchController::class, 'index'])->name('search');
 
     // Dashboard
     Route::get('/dashboard/entity', [DashboardEntityController::class, 'index'])->name('dashboard-entity');

@@ -46,6 +46,12 @@
                                     Favorit
                                 </a>
                             </li>
+                            <li class="nav-item ms-3" style="padding-bottom: 4px;">
+                                <form action="{{ route('search') }}" method="get">
+                                    <input type="text" name="cari" placeholder="Cari Google Art Movement" autocomplete="off">
+                                    <input type="submit" value="Cari">
+                                </form>
+                            </li>
                             <li class="nav-item ms-3">
                                 <div class="btn-group">
                                     <button class="border-0" style="background-color: transparent;"
@@ -127,6 +133,12 @@
                                     style="color: #202124; font-size: 15px; font-weight: 500;">
                                     Favorit
                                 </a>
+                            </li>
+                            <li class="nav-item ms-3" style="padding-bottom: 4px;">
+                                <form action="{{ route('search') }}" method="get">
+                                    <input type="text" name="cari" placeholder="Cari Google Art Movement" autocomplete="off">
+                                    <input type="submit" value="Cari">
+                                </form>
                             </li>
                             <li class="nav-item ms-3">
                                 <div class="btn-group">

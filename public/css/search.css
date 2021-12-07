@@ -1,0 +1,179 @@
+/* Swiper */
+.swiper-slide {
+    width: 222px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    padding: 25px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
+        0 2px 6px 2px rgb(60 64 67 / 15%);
+    color: black !important;
+}
+
+.swiper-button-next::after {
+    content: "\2192";
+    font-size: 25px;
+}
+
+.swiper-button-prev::after {
+    content: "\2190";
+    font-size: 25px;
+}
+
+/* Artikel */
+.entity-article-terkait,
+.entity-terkait,
+.entity-asset-terkait,
+.entity-artist-terkait,
+.entity-partner-terkait {
+    width: calc(100% - 40px * 2);
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 0;
+}
+
+.entity-article-terkait-header {
+    height: auto;
+    max-width: 1200px;
+    margin: 0 0 24px;
+}
+
+.entity-article-terkait-header h3 {
+    padding: 0;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #3c4043;
+}
+
+.entity-article-terkait-header a {
+    margin: 8px 24px 12px 24px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0.01785714em;
+    color: #1a73e8;
+}
+
+.entity-article-terkait-content,
+.entity-terkait-content:not(:last-child),
+.entity-asset-terkait-content:not(:last-child),
+.entity-artist-terkait-content:not(:last-child),
+.entity-partner-terkait-content:not(:last-child) {
+    margin-right: 16px;
+}
+
+.entity-article-terkait-content-image img {
+    width: 222px;
+    height: 222px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.entity-article-terkait-content-exhibit {
+    max-width: 222px;
+}
+
+.entity-article-terkait-content-exhibit span {
+    font-family: "Roboto";
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: 0.07272727em;
+    text-transform: uppercase;
+    color: #1a73e8;
+    margin-bottom: 3px;
+}
+
+.entity-article-terkait-content-exhibit h3 {
+    max-width: 222px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0.00625em;
+    color: #3c4043;
+    margin: 0 0 4px;
+    margin-bottom: 6px;
+}
+
+.entity-article-terkait-content-exhibit h4 {
+    margin: 0;
+    font-family: "Roboto";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.025em;
+    color: #80868b;
+}
+
+/* Gerakan Seni Lainnya, Seniman Lainnya, & Kategori Lainnya */
+.entity-terkait-header,
+.entity-asset-terkait-header,
+.entity-artist-terkait-header,
+.entity-partner-terkait-header {
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.entity-terkait-header h3,
+.entity-asset-terkait-header h3,
+.entity-artist-terkait-header h3,
+.entity-partner-terkait-header h3 {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #3c4043;
+}
+
+.entity-terkait-content a,
+.entity-asset-terkait-content a,
+.entity-artist-terkait-content a,
+.entity-partner-terkait-content a {
+    border-radius: 8px;
+    overflow: hidden !important;
+}
+
+.entity-terkait-content a img,
+.entity-asset-terkait-content a img,
+.entity-artist-terkait-content a img,
+.entity-partner-terkait-content a img {
+    transition: transform 1000ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.entity-terkait-content:hover a img,
+.entity-asset-terkait-content:hover a img,
+.entity-artist-terkait-content:hover a img,
+.entity-partner-terkait-content:hover a img {
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.entity-terkait-content a span,
+.entity-asset-terkait-content a span,
+.entity-artist-terkait-content a span,
+.entity-partner-terkait-content a span {
+    padding: 60px 16px 16px;
+}
+
+.tidak-ada-hasil {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: #9aa0a6;
+}
+
+.tidak-ada-hasil-icon {
+    height: 48px;
+    width: 48px;
+    fill: #dadce0;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}
