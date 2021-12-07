@@ -4,7 +4,7 @@
             <div class="row justify-content-center form-bg-image">
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <div class="bg-white shadow border-0 rounded p-4 p-lg-5 w-100 fmxw-500">
-                        <h1 class="h3 mb-4">Tambah Data Exhibit</h1>
+                        <h1 class="h3 mb-4">Edit Data Exhibit</h1>
                         <form action="{{ route('exhibit.update', $exhibits->id) }}" method="POST">
                             <!-- Form -->
                             @method('put')

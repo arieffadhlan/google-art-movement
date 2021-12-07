@@ -1,5 +1,5 @@
 <x-dashboard-layout title="Gerakan Seni">
-    <section class="vh-lg-500 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
+    <section class="h-100 mt-5 mb-5 bg-soft d-flex align-items-center">
         <div class="container">
             <div class="row justify-content-center form-bg-image">
                 <div class="col-12 d-flex align-items-center justify-content-center">
