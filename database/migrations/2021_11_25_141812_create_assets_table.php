@@ -19,9 +19,9 @@ class CreateAssetsTable extends Migration
             $table->text('desc')->nullable();
             $table->text('detail');
             $table->string('image');
-            $table->bigInteger('entites_id');
-            $table->bigInteger('artist_id');
-            $table->bigInteger('partner_id');
+            $table->bigInteger('entites_id')->constrained('entities');
+            $table->bigInteger('artist_id')->constrained('artists');
+            $table->bigInteger('partner_id')->constrained('partners');
             $table->YEAR('year');
             $table->timestamps();
         });

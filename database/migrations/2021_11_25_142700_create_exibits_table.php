@@ -18,8 +18,8 @@ class CreateExibitsTable extends Migration
             $table->string('title');
             $table->text('detail');
             $table->string('image');
-            $table->string('entites_id');
-            $table->string('partner_id');
+            $table->string('entites_id')->constrained('entities');
+            $table->string('partner_id')->constrained('partners');
             $table->string('date'); //karena pelaksanaan pameran berupa tgl (2 des 2020 - 5 des 2020)
             $table->timestamps();
         });

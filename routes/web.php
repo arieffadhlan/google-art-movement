@@ -1,21 +1,22 @@
 <?php
 
-use App\Http\Controllers\ArtistController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AssetController;
-use App\Http\Controllers\DashboardArtistController;
+use App\Http\Controllers\StoryController;
+use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\EntityController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ExhibitController;
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\LupaPasswordController;
 use App\Http\Controllers\DashboardAssetController;
+use App\Http\Controllers\DashboardStoryController;
+use App\Http\Controllers\DashboardArtistController;
 use App\Http\Controllers\DashboardEntityController;
 use App\Http\Controllers\DashboardExhibitController;
 use App\Http\Controllers\DashboardPartnerController;
-use App\Http\Controllers\DashboardStoryController;
-use App\Http\Controllers\EntityController;
-use App\Http\Controllers\ExhibitController;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LupaPasswordController;
-use App\Http\Controllers\PartnerController;
-use App\Http\Controllers\SearchController;
-use App\Http\Controllers\StoryController;
 
 Auth::routes();
 Route::middleware('guest')->group(function () {
@@ -79,4 +80,4 @@ Route::middleware('auth')->group(function () {
 
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');

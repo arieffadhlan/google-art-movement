@@ -22,13 +22,11 @@ class EntityController extends Controller
 
         $stories = DB::table('entities')
             ->join('stories', 'stories.entites_id', '=', 'entities.id')
-            // ->join('partners', 'stories.partner_id', '=', 'partners.id')
             ->where('entities.id', '=', $entityId)
             ->select(
                 'stories.id as story_id',
                 'stories.title as story_title',
                 'stories.image as story_image',
-                // 'partners.name as partner_name'
             )
             ->limit(7)
             ->get();

@@ -46,10 +46,14 @@
                                     Favorit
                                 </a>
                             </li>
-                            <li class="nav-item ms-3" style="padding-bottom: 4px;">
+                            <li class="nav-item ms-3">
                                 <form action="{{ route('search') }}" method="get">
-                                    <input type="text" name="cari" placeholder="Cari Google Art Movement" autocomplete="off">
-                                    <input type="submit" value="Cari">
+                                    <div class="">
+                                        <div class="input-group">
+                                            <input type="text" name="cari" class="form-control" placeholder="Cari Google Art Movement" autocomplete="off">
+                                            <button type="submit" class="btn btn-primary" style="color: #ffffff;background-color: #1F2937; border-color: #1F2937; box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(17 24 39 / 8%);">Cari</button>
+                                        </div>
+                                    </div>
                                 </form>
                             </li>
                             <li class="nav-item ms-3">
@@ -134,10 +138,14 @@
                                     Favorit
                                 </a>
                             </li>
-                            <li class="nav-item ms-3" style="padding-bottom: 4px;">
+                            <li class="nav-item ms-3">
                                 <form action="{{ route('search') }}" method="get">
-                                    <input type="text" name="cari" placeholder="Cari Google Art Movement" autocomplete="off">
-                                    <input type="submit" value="Cari">
+                                    <div class="">
+                                        <div class="input-group">
+                                            <input type="text" name="cari" class="form-control" placeholder="Cari Google Art Movement" autocomplete="off">
+                                            <button type="submit" class="btn btn-primary" style="color: #ffffff;background-color: #1F2937; border-color: #1F2937; box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(17 24 39 / 8%);">Cari</button>
+                                        </div>
+                                    </div>
                                 </form>
                             </li>
                             <li class="nav-item ms-3">

@@ -42,7 +42,7 @@ class DashboardAssetController extends Controller
             ->select(
                 'assets.id as asset_id', 
                 'assets.title as asset_title', 
-                'assets.desc as asset title', 
+                'assets.desc as asset_desc', 
                 'assets.detail as asset_detail',
                 'assets.year as asset_year',
                 'entities.name as kategori',

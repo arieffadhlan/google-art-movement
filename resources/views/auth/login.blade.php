@@ -54,16 +54,16 @@
                                     <div class="fw-bold text-danger mt-1">{{ $message }}</div>
                                 @enderror
 
-                                <div class="form-group row mt-2 mb-4">
+                                {{-- <div class="form-group row mt-2 mb-4">
                                     <div class="col-12 d-flex justify-content-end">
                                         <a class="btn btn-link p-0 text-decoration-none"
                                             href="{{ route('resetPassword') }}">
                                             {{ __('Lupa Password?') }}
                                         </a>
                                     </div>
-                                </div>
+                                </div> --}}
 
-                                <div class="form-group row mb-0">
+                                <div class="form-group row mt-4 mb-0">
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary w-100">
                                             {{ __('Login') }}

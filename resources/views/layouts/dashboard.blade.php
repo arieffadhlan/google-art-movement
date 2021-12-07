@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard/volt.css') }}">
     <link rel="stylesheet" href="{{ asset('vendors/simple-datatables/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendors/fontawesome/all.min.css') }}">
 </head>
 
 <body>
@@ -44,6 +45,7 @@
     <script src="{{ asset('vendors/onscreen/dist/on-screen.umd.min.js') }}"></script>
     <script src="{{ asset('vendors/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
     <script src="{{ asset('vendors/simplebar/dist/simplebar.min.js') }}"></script>
+    <script src="{{ asset('vendors/fontawesome/all.min.js') }}"></script>
     <script src="{{ asset('vendors/simple-datatables/simple-datatables.js') }}"></script>
     @if (request()->route()->uri == 'dashboard/entity')
         <script>

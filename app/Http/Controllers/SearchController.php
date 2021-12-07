@@ -9,6 +9,10 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
+        if ($request->cari == null) {
+            return back();
+        }
+        
         // Entity
         $entities = DB::table('entities')
             ->where('entities.name', 'like', $request->cari)
