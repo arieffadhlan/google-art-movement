@@ -44,6 +44,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/exhibit', [DashboardExhibitController::class, 'index'])->name('dashboard-exhibit');
     Route::get('/dashboard/artist', [DashboardArtistController::class, 'index'])->name('dashboard-artist');
     Route::get('/dashboard/partner', [DashboardPartnerController::class, 'index'])->name('dashboard-partner');
+
+    Route::get('/dashboard/partner/create', [DashboardPartnerController::class, 'create'])->name('partner.create');
+    Route::post('/dashboard/partner/store', [DashboardPartnerController::class, 'store'])->name('partner.store');
+    Route::get('/dashboard/partner/edit/{id}', [DashboardPartnerController::class, 'edit'])->name('partner.edit');
+    Route::put('/dashboard/partner/edit/{id}', [DashboardPartnerController::class, 'update'])->name('partner.update');
+    Route::delete('/dashboard/partner/delete/{id}', [DashboardPartnerController::class, 'destroy'])->name('partner.destroy');
+
+    Route::get('/dashboard/exhibit/create', [DashboardExhibitController::class, 'create'])->name('exhibit.create');
+    Route::post('/dashboard/exhibit/store', [DashboardExhibitController::class, 'store'])->name('exhibit.store');
+    Route::get('/dashboard/exhibit/edit/{id}', [DashboardExhibitController::class, 'edit'])->name('exhibit.edit');
+    Route::put('/dashboard/exhibit/edit/{id}', [DashboardExhibitController::class, 'update'])->name('exhibit.update');
+    Route::delete('/dashboard/exhibit/delete/{id}', [DashboardExhibitController::class, 'destroy'])->name('exhibit.destroy');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

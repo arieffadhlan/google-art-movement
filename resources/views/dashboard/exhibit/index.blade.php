@@ -7,7 +7,7 @@
             <div class="card-header fs-5 fw-bold text-primary">
                 <div class="d-flex justify-content-between align-items-center">
                     Data Exhibit
-                    <a class="btn btn-primary" href="#" role="button">
+                    <a class="btn btn-primary" href="{{ route('exhibit.create') }}" role="button">
                         Tambah Data
                     </a>
                 </div>
@@ -35,18 +35,17 @@
                                         <td class="text-wrap">{{ $exhibit->kategori }}</td>
                                         <td class="text-wrap">{{ $exhibit->partner }}</td>
                                         <td>
-                                            <a class="badge bg-success border-0 text-white fw-normal" style="font-size: 14px;" href="#" role="button">
-                                                Ubah
-                                            </a>
-                                            <button type="button" class="badge bg-danger border-0 fw-normal" style="font-size: 14px;" data-bs-toggle="modal"
-                                                data-bs-target="#modalDelete">
-                                                Hapus
-                                            </button>
-                                            {{-- <x-modal-delete-stock>
-                                                <x-slot name="stock_id">
-                                                    {{ $exhibit->id }}
-                                                </x-slot>
-                                            </x-modal-delete-stock> --}}
+                                            <div class="d-flex flex-row justify-content-center">
+                                                <a class="badge bg-success border-0 text-white fw-normal me-1" style="font-size: 14px;" href="{{ route('exhibit.edit', $exhibit->exhibit_id) }}" role="button">
+                                                    Ubah
+                                                </a>
+
+                                                <form action="{{ route('exhibit.destroy', $exhibit->exhibit_id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')                                                
+                                                    <button type="submit" class="badge bg-danger border-0 text-white fw-normal" style="font-size: 14px;">Hapus</button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

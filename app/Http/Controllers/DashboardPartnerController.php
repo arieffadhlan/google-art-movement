@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Partner;
 
 class DashboardPartnerController extends Controller
 {
@@ -15,7 +16,7 @@ class DashboardPartnerController extends Controller
     public function index()
     {
         $partners = DB::table('partners')
-            ->select('partners.name', 'partners.location', 'partners.detail')
+            ->select('partners.id', 'partners.name', 'partners.location', 'partners.detail')
             ->get();
         
         return view('dashboard.partner.index', compact('partners'));
@@ -28,7 +29,7 @@ class DashboardPartnerController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.partner.create');
     }
 
     /**
@@ -39,7 +40,27 @@ class DashboardPartnerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'name' => 'required',
+            'location'  => 'required',
+            'detail' => 'required',
+            'logo' => 'required',
+            'image' => 'required',
+        ], $messages);
+
+        Partner::create([
+            'name' => $request->name,
+            'location'  => $request->location,
+            'detail' => $request->detail,
+            'logo' => $request->logo,
+            'image' => $request->image,
+        ]);
+
+        return redirect('/dashboard/partner');
     }
 
     /**
@@ -61,7 +82,8 @@ class DashboardPartnerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $partners = Partner::find($id);
+        return view('dashboard.partner.edit', compact('partners'));
     }
 
     /**
@@ -73,7 +95,29 @@ class DashboardPartnerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $partners = Partner::whereId($id)->first();
+
+        $messages = [
+            'required' => 'Harap masukkan :attribute!'
+        ];
+
+        $this->validate($request, [
+            'name' => 'required',
+            'location'  => 'required',
+            'detail' => 'required',
+            'logo' => 'required',
+            'image' => 'required',
+        ], $messages);
+
+        $partners->update([
+            'name' => $request->name,
+            'location'  => $request->location,
+            'detail' => $request->detail,
+            'logo' => $request->logo,
+            'image' => $request->image,
+        ]);
+
+        return redirect('/dashboard/partner');
     }
 
     /**
@@ -84,6 +128,9 @@ class DashboardPartnerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $partners = Partner::find($id);
+        $partners->delete();
+
+        return redirect('/dashboard/partner');
     }
 }
