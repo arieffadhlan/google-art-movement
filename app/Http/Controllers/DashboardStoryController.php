@@ -182,6 +182,6 @@ class DashboardStoryController extends Controller
         $story = Story::find($id);
         $story->delete();
 
-        return redirect('/dashboard/asset');
+        return redirect('/dashboard/story');
     }
 }

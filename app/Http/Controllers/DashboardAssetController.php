@@ -100,6 +100,7 @@ class DashboardAssetController extends Controller
         Asset::create([
             'title' => $request->title,
             'year' => $request->year,
+            'desc' => $request->desc,
             'detail' => $request->detail,
             'image' => $request->image,
             'entites_id' => $request->entites_id,
@@ -183,6 +184,7 @@ class DashboardAssetController extends Controller
         $assets->update([
             'title' => $request->title,
             'year' => $request->year,
+            'desc' => $request->desc,
             'detail' => $request->detail,
             'image' => $request->image,
             'entites_id' => $request->entites_id,

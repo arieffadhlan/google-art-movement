@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-gray-800">Edit Data</button>
+                                <button type="submit" class="btn btn-gray-800">Ubah Data</button>
                             </div>
                         </form>
                     </div>
