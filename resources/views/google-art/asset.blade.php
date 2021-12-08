@@ -13,7 +13,7 @@
                             <a href="{{ route('artist', $asset['0']->artist_id) }}"
                                 class="text-decoration-none">{{ $asset['0']->artist_name }}</a>
                         </span>
-                        <span class="asset-header-left-bio-year">2014</span>
+                        <span class="asset-header-left-bio-year">{{ $asset['0']->asset_year }}</span>
                     </h2>
                 </div>
                 <div class="asset-header-left-action">

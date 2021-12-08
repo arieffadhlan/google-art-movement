@@ -26,6 +26,7 @@ class AssetController extends Controller
                 'assets.desc as asset_desc',
                 'assets.detail as asset_detail',
                 'assets.image as asset_image',
+                'assets.year as asset_year',
                 'artists.id as artist_id',
                 'artists.name as artist_name',
                 'partners.id as partner_id',
