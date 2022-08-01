@@ -3162,6 +3162,7 @@
         },
         {
             "name": "symfony/deprecation-contracts",
+<<<<<<< HEAD
             "version": "v3.0.2",
             "source": {
                 "type": "git",
@@ -3172,6 +3173,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
                 "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
+=======
+            "version": "v2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
+>>>>>>> 526dc0231e2614b5d433311221c4699a346570a7
                 "shasum": ""
             },
             "require": {
@@ -3209,7 +3222,11 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.2"
+=======
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.2"
+>>>>>>> 526dc0231e2614b5d433311221c4699a346570a7
             },
             "funding": [
                 {
@@ -3225,7 +3242,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-01-02T09:55:41+00:00"
+=======
+            "time": "2022-01-02T09:53:40+00:00"
+>>>>>>> 526dc0231e2614b5d433311221c4699a346570a7
         },
         {
             "name": "symfony/error-handler",
@@ -8122,5 +8143,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
